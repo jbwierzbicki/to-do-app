@@ -1,0 +1,18 @@
+.card-header {
+    text-align: center !important;
+    margin: 0 auto;
+    width: 500px;
+}
+
+body {
+    margin: 0 auto;
+}
+
+h1 {
+    text-align: center;
+}
+
+.td-form {
+    margin: auto !important;
+    text-align: center;
+}
