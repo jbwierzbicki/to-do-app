@@ -12,27 +12,32 @@
 </head>
 
 <body>
-    <header class="mdl-layout__header mdl-layout__header--transparent">
-        <h1>To-Do App</h1>
-    </header>
 
-    <main class="mdl-layout__content mdl-grid">
-        <div class="mdl-grid mdl-cell mdl-cell--12-col mdl-cell--4-col-tablet mdl-card mdl-shadow--4dp">
-        <form id="addToDoForm" class="td-form">
-            <h2 class="mdl-card__title-text card-header">New To-Do:</h2>
-            <br>
-            <label for="newToDoText">Type To-Do Here:</label>
-            <input class="mdl-textfield__input" type="text" id="newToDoText">
-            <button type="submit">Add To-Do!</button>
-        </form>
-
-        <ul id="toDoList" class="mdl-list">
-        </ul>
+    <div class="demo-card-wide mdl-card mdl-shadow--2dp">
+        <div class="mdl-card__title">
+            <h2 class="mdl-card__title-text">To-Do List</h2>
         </div>
-
-        <script src="app.js"></script>
-    </main>
+        <div class="mdl-card__supporting-text">
+            Add a To-Do below
+        </div>
+        <form id="addToDoForm" class="td-form">
+            <div class="mdl-card__actions mdl-card--border">
+                <div class="mdl-textfield mdl-js-textfield">
+                    <input class="mdl-textfield__input" type="text" id="newToDoText">
+                    <label class="mdl-textfield__label" for="newToDoText">Text...</label>
+                </div>
+                <button type="submit" class="mdl-button mdl-button--colored mdl-js-button mdl-js-ripple-effect">
+                    Add It
+                </submit>
+            </div>
+        </form>
+        <ul id="toDoList" class="mdl-list">
+            </ul>
+    </div>
+    <script src="app.js"></script>
 
 </body>
+
+
 
 </html>
