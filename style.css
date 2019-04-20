@@ -24,17 +24,19 @@ h1 {
     text-align: center;
 }
 
-
-
 /* Demo card styling */
+
 .demo-card-wide.mdl-card {
     width: 512px;
     margin: auto;
-  }
-  .demo-card-wide > .mdl-card__title {
+}
+
+.demo-card-wide>.mdl-card__title {
     color: #fff;
     height: 176px;
     background: #4A148C;
-  }
-  .demo-card-wide > .mdl-card__menu {
-    color: #f
+}
+
+.demo-card-wide>.mdl-card__menu {
+    color: white;
+}
