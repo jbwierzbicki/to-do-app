@@ -3,6 +3,10 @@ function onReady() {
     const addToDoForm = document.getElementById('addToDoForm');
     let id = 0;
 
+    toDos = JSON.parse( localStorage.getItem('toDos') );
+    console.log(toDos);
+    
+
     function createNewToDo() {
         const newToDoText = document.getElementById('newToDoText');
         if (!newToDoText.value) { return; }
@@ -30,6 +34,13 @@ function onReady() {
             const checkbox = document.createElement('input');
             const deleteBtn = document.createElement('input');
 
+            if (toDo.complete == true) {
+                checkbox.checked = true;
+            } else {
+                checkbox.checked = false;
+            };
+
+
             deleteBtn.type = "button";
             checkbox.type = "checkbox";
 
@@ -49,7 +60,19 @@ function onReady() {
                                 
                 newLi.textContent = '';
 
+                localStorage.setItem('toDos', JSON.stringify(toDos));
+
                 renderTheUI()
+            });
+
+            checkbox.addEventListener('change', function () {
+                if (this.checked) {
+                    toDos[toDo.id].complete = true;
+                } else {
+                    toDos[toDo.id].complete = false;
+                }
+                console.log(toDos);
+                localStorage.setItem('toDos', JSON.stringify(toDos));
             });
 
 
@@ -60,7 +83,7 @@ function onReady() {
         event.preventDefault();
         createNewToDo();
     });
-
+    renderTheUI();
 }
 
 
